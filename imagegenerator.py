@@ -109,9 +109,9 @@ def get_info(result, rgb):
                 
                 # checking the color of centroid and adding values of houses 
                 # if condition is satisfied
-                if any(result[y,x] == (240,18,0)):
+                if all(result[y,x] == (240,18,0)):
                     blue+=1
-                elif any(result[y,x] == [43,10,255]):
+                elif all(result[y,x] == [43,10,255]):
                     red+=1
     # returning the values of number of houses
     return red, blue
