@@ -94,7 +94,7 @@ def get_info(result, rgb):
     
     # getting the approx shape
     for cnt in contours:
-        approx = cv2.approxPolyDP(cnt, 0.1*cv2.arcLength(cnt, True), True)
+        approx = cv2.approxPolyDP(cnt, 0.05*cv2.arcLength(cnt, True), True)
 
         # checking if the shape is triangle or not
         if len(approx) == 3:
